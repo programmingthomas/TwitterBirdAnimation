@@ -1,6 +1,6 @@
 #Twitter Bird Animation
 
-Replicating Twitter's bird zoom startup animation in Objective-C
+Replicating Twitter's bird zoom startup animation in Objective-C.
 
 Read [the accompanying blog post](http://iosdevtips.co/post/88481653818/twitter-ios-app-bird-zoom-animation)
 

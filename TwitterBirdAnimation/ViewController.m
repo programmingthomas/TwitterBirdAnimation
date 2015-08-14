@@ -8,9 +8,11 @@
 
 #import "ViewController.h"
 
+const CGFloat TwitterLogoMaskWidth = 1193;
+const CGFloat TwitterLogoMaskHeight = 926;
+
 @interface ViewController ()
 
-@property UIImageView * imageView;
 @property CALayer * mask;
 @property CAKeyframeAnimation * keyFrameAnimation;
 
@@ -21,18 +23,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //N.B. I renamed the twitterscreen.png file to twitterscreen@2x.png because otherwise
-    //the image view created here is twice the width and height of the screen
-    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"twitterscreen"]];
-    [self.view addSubview:self.imageView];
+    //The view must be configured by this point, currently it is loaded from ViewController.xib
     
     self.mask = [CALayer layer];
     self.mask.contents = (__bridge id)([UIImage imageNamed:@"twitter logo mask"].CGImage);
-    self.mask.bounds = CGRectMake(0, 0, 100, 100);
+    self.mask.bounds = CGRectMake(0, 0, TwitterLogoMaskWidth * 0.1, TwitterLogoMaskHeight * 0.1);
     self.mask.anchorPoint = CGPointMake(0.5, 0.5);
-    self.mask.position = CGPointMake(CGRectGetMidX(self.imageView.bounds), CGRectGetMidY(self.imageView.bounds));
-    
-    self.imageView.layer.mask = self.mask;
+    //In iOS 8 the views bounds are 600 * 600 (when from instantiated from a XIB), so I have to use the screen bounds instead
+    self.mask.position = CGPointMake(CGRectGetMidX([[UIScreen mainScreen] bounds]), CGRectGetMidY([[UIScreen mainScreen] bounds]));
+    self.view.layer.mask = self.mask;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -47,12 +46,11 @@
         keyFrameAnimation.beginTime = CACurrentMediaTime() + 1; //add delay of 1 second
         
         CGRect initalBounds = self.mask.bounds;
-        CGRect secondBounds = CGRectMake(0, 0, 90, 90);
-        CGRect finalBounds = CGRectMake(0, 0, 1500, 1500);
+        CGRect secondBounds = CGRectMake(0, 0, TwitterLogoMaskWidth * 0.075, TwitterLogoMaskHeight * 0.075);
+        CGRect finalBounds = CGRectMake(0, 0, TwitterLogoMaskWidth * 2, TwitterLogoMaskHeight * 2);
         keyFrameAnimation.values = @[[NSValue valueWithCGRect:initalBounds],
                                      [NSValue valueWithCGRect:secondBounds],
                                      [NSValue valueWithCGRect:finalBounds]];
-        //N.B. @1 -> [NSNumber numberWithInt:1]
         keyFrameAnimation.keyTimes = @[@0, @0.3, @1];
         keyFrameAnimation.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut], [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
         

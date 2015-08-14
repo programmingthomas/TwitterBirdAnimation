@@ -10,9 +10,9 @@
 		E98B3AD4197A469D00456435 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98B3AD3197A469D00456435 /* ViewController.m */; };
 		E98B3AD7197A46EF00456435 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E98B3AD6197A46EF00456435 /* AppDelegate.m */; };
 		E98B3AD9197A47F900456435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E98B3AD8197A47F900456435 /* main.m */; };
+		E9D425EF1B7DC82A0088FBAE /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D425EE1B7DC82A0088FBAE /* ViewController.xib */; };
 		F9D3802E194809CC004E9CD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D3802D194809CC004E9CD2 /* Images.xcassets */; };
 		F9D3803A194809CC004E9CD2 /* TwitterBirdAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D38039194809CC004E9CD2 /* TwitterBirdAnimationTests.swift */; };
-		F9D3804419480BF0004E9CD2 /* twitterscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D3804319480BF0004E9CD2 /* twitterscreen@2x.png */; };
 		F9D3804819480E4B004E9CD2 /* twitter logo mask.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D3804719480E4B004E9CD2 /* twitter logo mask.png */; };
 /* End PBXBuildFile section */
 
@@ -32,13 +32,13 @@
 		E98B3AD5197A46EF00456435 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E98B3AD6197A46EF00456435 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E98B3AD8197A47F900456435 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E9D425EE1B7DC82A0088FBAE /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		F9D38026194809CC004E9CD2 /* TwitterBirdAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterBirdAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D3802A194809CC004E9CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9D3802D194809CC004E9CD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F9D38033194809CC004E9CD2 /* TwitterBirdAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterBirdAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D38038194809CC004E9CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9D38039194809CC004E9CD2 /* TwitterBirdAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterBirdAnimationTests.swift; sourceTree = "<group>"; };
-		F9D3804319480BF0004E9CD2 /* twitterscreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterscreen@2x.png"; sourceTree = "<group>"; };
 		F9D3804719480E4B004E9CD2 /* twitter logo mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter logo mask.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,10 +85,10 @@
 				E98B3AD6197A46EF00456435 /* AppDelegate.m */,
 				E98B3AD2197A469D00456435 /* ViewController.h */,
 				E98B3AD3197A469D00456435 /* ViewController.m */,
-				F9D3804319480BF0004E9CD2 /* twitterscreen@2x.png */,
 				F9D3804719480E4B004E9CD2 /* twitter logo mask.png */,
 				F9D3802D194809CC004E9CD2 /* Images.xcassets */,
 				F9D38029194809CC004E9CD2 /* Supporting Files */,
+				E9D425EE1B7DC82A0088FBAE /* ViewController.xib */,
 			);
 			path = TwitterBirdAnimation;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9D3802E194809CC004E9CD2 /* Images.xcassets in Resources */,
-				F9D3804419480BF0004E9CD2 /* twitterscreen@2x.png in Resources */,
+				E9D425EF1B7DC82A0088FBAE /* ViewController.xib in Resources */,
 				F9D3804819480E4B004E9CD2 /* twitter logo mask.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

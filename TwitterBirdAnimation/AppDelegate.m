@@ -18,7 +18,7 @@
     [self.window makeKeyAndVisible];
     [UIApplication sharedApplication].statusBarHidden = YES;
     
-    self.window.rootViewController = [ViewController new];
+    self.window.rootViewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     
     return YES;
 }
